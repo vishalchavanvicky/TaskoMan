@@ -1,0 +1,58 @@
+*{
+    // box-shadow: inset 0 0 0 1px green;
+    // box-shadow: 0 0 0 1px green;
+}
+
+:root {
+    --appBg: rgb(216 225 253);
+    --headerbg: rgb(247, 228, 203); 
+    --btnFontL: 15px;
+    --btnFontS: 12px;
+
+}
+#app{
+    background-color: var(--appBg);
+    height: 100vh;
+}
+#header{
+    width: 100%;
+    height: 60px;
+    background-color: var(--headerbg);
+    .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    #appName{
+        font-weight: bold;
+        color: blue;
+    }
+}
+#taskItem { 
+    border-radius: 10;
+    width: 100%;
+    max-height: 90px;
+    border: 1px solid #ff86e0;
+
+    #metaDetails{
+        max-width: 100%;
+        flex-grow: 1;
+    }
+    .font-size-small{
+        font-size: 10px;
+    }
+    #actions{
+        .btnFontScreen{
+            font-size: var(--btnFontL);
+        }
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    #taskItem #actions{
+        .btnFontScreen{
+            font-size: var(--btnFontS);
+        }
+    }
+}
